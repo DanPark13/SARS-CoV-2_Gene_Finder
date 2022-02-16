@@ -13,4 +13,6 @@ to determine which of these genes may encode key proteins of the virus, gaining 
 Within the `sars-cov-2.ipynb` notebook is the function implementation used to extract the genes in the virus and completed unit tests on the various functions in
 `test_gene_finder.py`
 
-This project was developed within my SoftDes class during my first year at the Olin College of Engineering.
+## Credits 
+
+This project was developed within my Software Design class during my first year at the [Olin College of Engineering](https://github.com/olin).
