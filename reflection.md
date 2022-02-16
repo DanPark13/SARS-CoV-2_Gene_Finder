@@ -1,0 +1,11 @@
+# Reflection on Gene Finder Problem
+
+## Limitations and Extensions
+
+Although this implementation was exemplary and found five essential proteins in the SARS-CoV-2 Virus, the code also had limitations because the complete genome of the severe acute respiratory syndrome coronavirus 2 has way more proteins than the ones we identified in our code. Although we did manage to get more significant proteins, the complete genome has smaller proteins that would need to be analyzed and identified. In order to cover these smaller genomes, we would have to alter our "noncoding_orf_threshold" function to include smaller strands by not sorting by the shortest of the longest ORFs in each strand and instead only removing strands if they are insignificant (such as they are only 3-6 nucleotides long.)
+
+## Contextual and Ethical Implications
+
+In addition to analyzing viral or bacterial DNA with gene finding, gene finding can be beneficial as test results can provide a sense of relief from uncertainty and help people make informed decisions about their health care and lifestyle. For example, a negative result can eliminate the need for unnecessary checkups and screening tests, while positive test results in a virus, such as a coronavirus, can direct a person toward available prevention, monitoring, and treatment options.
+
+However, testing may also affect those people as testing may increase anxiety and stress for some individuals. Testing also does not eliminate a person's risk for the disease, only identify if the person has it. If a person is diagnosed with COVID-19, that does not mean they would survive it even with the proper care and treatment. In addition to positive and negative cases, results in some cases may return inconclusive or uncertain, which adds additional anxiety and anticipation for future tests. Possible ways to address these risks would be to make more accurate tests that would give a specific positive or negative test, which would give a definitive answer for future care. Furthermore, with gene finding, even if it can't directly cure the disease, it is also beneficial to use these founded genes and develop a cure quickly and efficiently.

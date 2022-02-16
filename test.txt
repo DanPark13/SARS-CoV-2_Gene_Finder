@@ -1,0 +1,1492 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/steve/Dropbox/monochroic/github.com/olincollege/softdes-2021-01-admin/student-repos/DanPark13/assignments/4-using-sharing-code, configfile: pytest.ini
+plugins: timeout-1.4.2, anyio-2.2.0
+timeout: 1.0s
+timeout method: signal
+timeout func_only: False
+collected 587 items
+
+test_gene_finder.py .................................................... [  8%]
+.............F....................FF.............F.F......F.....F....... [ 21%]
+.......................................F...........................F.... [ 33%]
+........................F...................................F........... [ 45%]
+...F..F.F.......FF.F..F.............................F.......FF....F..... [ 57%]
+...................FFF......F........F.F.....F...............F..F....... [ 70%]
+...........F....F.............................F.......FF.........F...... [ 82%]
+........................................FF.....F.......F.............F.. [ 94%]
+..FF......F........F....F......                                          [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_rest_of_orf[ATGA-ATGA] __________________________
+
+strand = 'ATGA', rest = 'ATGA'
+
+    @pytest.mark.parametrize("strand,rest", rest_of_orf_cases)
+    def test_rest_of_orf(strand, rest):
+        """
+        Test that a string representing a strand of DNA gets mapped to the rest of
+        its open reading frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        rest_of_orf function returns a string representing a strand of DNA for the
+        rest of the given strand's open reading frame. This is the original strand
+        until reading sets of three nucleotides results in a STOP codon, or the
+        entire strand if no such codon appears when reading the strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            rest: A string representing the expected rest of the open reading frame
+                of strand, or the entirety of strand if reading it does not result
+                in a STOP codon at any point.
+        """
+>       assert rest_of_orf(strand) == rest
+E       AssertionError: assert 'ATG' == 'ATGA'
+E         - ATGA
+E         ?    -
+E         + ATG
+
+test_gene_finder.py:724: AssertionError
+______________________ test_rest_of_orf[ATGTTGA-ATGTTGA] _______________________
+
+strand = 'ATGTTGA', rest = 'ATGTTGA'
+
+    @pytest.mark.parametrize("strand,rest", rest_of_orf_cases)
+    def test_rest_of_orf(strand, rest):
+        """
+        Test that a string representing a strand of DNA gets mapped to the rest of
+        its open reading frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        rest_of_orf function returns a string representing a strand of DNA for the
+        rest of the given strand's open reading frame. This is the original strand
+        until reading sets of three nucleotides results in a STOP codon, or the
+        entire strand if no such codon appears when reading the strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            rest: A string representing the expected rest of the open reading frame
+                of strand, or the entirety of strand if reading it does not result
+                in a STOP codon at any point.
+        """
+>       assert rest_of_orf(strand) == rest
+E       AssertionError: assert 'ATGTTG' == 'ATGTTGA'
+E         - ATGTTGA
+E         ?       -
+E         + ATGTTG
+
+test_gene_finder.py:724: AssertionError
+______________________ test_rest_of_orf[ATGTTAA-ATGTTAA] _______________________
+
+strand = 'ATGTTAA', rest = 'ATGTTAA'
+
+    @pytest.mark.parametrize("strand,rest", rest_of_orf_cases)
+    def test_rest_of_orf(strand, rest):
+        """
+        Test that a string representing a strand of DNA gets mapped to the rest of
+        its open reading frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        rest_of_orf function returns a string representing a strand of DNA for the
+        rest of the given strand's open reading frame. This is the original strand
+        until reading sets of three nucleotides results in a STOP codon, or the
+        entire strand if no such codon appears when reading the strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            rest: A string representing the expected rest of the open reading frame
+                of strand, or the entirety of strand if reading it does not result
+                in a STOP codon at any point.
+        """
+>       assert rest_of_orf(strand) == rest
+E       AssertionError: assert 'ATGTTA' == 'ATGTTAA'
+E         - ATGTTAA
+E         ?       -
+E         + ATGTTA
+
+test_gene_finder.py:724: AssertionError
+______________________ test_rest_of_orf[ATGATAA-ATGATAA0] ______________________
+
+strand = 'ATGATAA', rest = 'ATGATAA'
+
+    @pytest.mark.parametrize("strand,rest", rest_of_orf_cases)
+    def test_rest_of_orf(strand, rest):
+        """
+        Test that a string representing a strand of DNA gets mapped to the rest of
+        its open reading frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        rest_of_orf function returns a string representing a strand of DNA for the
+        rest of the given strand's open reading frame. This is the original strand
+        until reading sets of three nucleotides results in a STOP codon, or the
+        entire strand if no such codon appears when reading the strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            rest: A string representing the expected rest of the open reading frame
+                of strand, or the entirety of strand if reading it does not result
+                in a STOP codon at any point.
+        """
+>       assert rest_of_orf(strand) == rest
+E       AssertionError: assert 'ATGATA' == 'ATGATAA'
+E         - ATGATAA
+E         ?       -
+E         + ATGATA
+
+test_gene_finder.py:724: AssertionError
+______________________ test_rest_of_orf[ATGATAA-ATGATAA1] ______________________
+
+strand = 'ATGATAA', rest = 'ATGATAA'
+
+    @pytest.mark.parametrize("strand,rest", rest_of_orf_cases)
+    def test_rest_of_orf(strand, rest):
+        """
+        Test that a string representing a strand of DNA gets mapped to the rest of
+        its open reading frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        rest_of_orf function returns a string representing a strand of DNA for the
+        rest of the given strand's open reading frame. This is the original strand
+        until reading sets of three nucleotides results in a STOP codon, or the
+        entire strand if no such codon appears when reading the strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            rest: A string representing the expected rest of the open reading frame
+                of strand, or the entirety of strand if reading it does not result
+                in a STOP codon at any point.
+        """
+>       assert rest_of_orf(strand) == rest
+E       AssertionError: assert 'ATGATA' == 'ATGATAA'
+E         - ATGATAA
+E         ?       -
+E         + ATGATA
+
+test_gene_finder.py:724: AssertionError
+______________________ test_rest_of_orf[ATGATGA-ATGATGA] _______________________
+
+strand = 'ATGATGA', rest = 'ATGATGA'
+
+    @pytest.mark.parametrize("strand,rest", rest_of_orf_cases)
+    def test_rest_of_orf(strand, rest):
+        """
+        Test that a string representing a strand of DNA gets mapped to the rest of
+        its open reading frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        rest_of_orf function returns a string representing a strand of DNA for the
+        rest of the given strand's open reading frame. This is the original strand
+        until reading sets of three nucleotides results in a STOP codon, or the
+        entire strand if no such codon appears when reading the strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            rest: A string representing the expected rest of the open reading frame
+                of strand, or the entirety of strand if reading it does not result
+                in a STOP codon at any point.
+        """
+>       assert rest_of_orf(strand) == rest
+E       AssertionError: assert 'ATGATG' == 'ATGATGA'
+E         - ATGATGA
+E         ?       -
+E         + ATGATG
+
+test_gene_finder.py:724: AssertionError
+___________________ test_rest_of_orf[ATGAAACTGA-ATGAAACTGA] ____________________
+
+strand = 'ATGAAACTGA', rest = 'ATGAAACTGA'
+
+    @pytest.mark.parametrize("strand,rest", rest_of_orf_cases)
+    def test_rest_of_orf(strand, rest):
+        """
+        Test that a string representing a strand of DNA gets mapped to the rest of
+        its open reading frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        rest_of_orf function returns a string representing a strand of DNA for the
+        rest of the given strand's open reading frame. This is the original strand
+        until reading sets of three nucleotides results in a STOP codon, or the
+        entire strand if no such codon appears when reading the strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            rest: A string representing the expected rest of the open reading frame
+                of strand, or the entirety of strand if reading it does not result
+                in a STOP codon at any point.
+        """
+>       assert rest_of_orf(strand) == rest
+E       AssertionError: assert 'ATGAAACTG' == 'ATGAAACTGA'
+E         - ATGAAACTGA
+E         ?          -
+E         + ATGAAACTG
+
+test_gene_finder.py:724: AssertionError
+___________________ test_find_all_orfs_oneframe[ATGA-orfs8] ____________________
+
+strand = 'ATGA', orfs = ['ATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_one_frame_cases)
+    def test_find_all_orfs_oneframe(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        non-overlapping open reading frames (ORFs) aligned to its frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs_oneframe function returns a list of strings representing all
+        non-overlapping ORFs in the strand that are aligned to the strand's frame
+        (i.e., starting a multiple of 3 nucleotides from the start of the strand).
+        Each ORF is a strand of DNA from a START codon to a STOP codon (or in the
+        case of the last ORF in the strand, to the end of the strand if no STOP
+        codon is encountered during reading).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand's frame.
+        """
+>       assert Counter(find_all_orfs_one_frame(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG': 1}) == Counter({'ATGA': 1})
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:746: AssertionError
+______________ test_find_all_orfs_oneframe[ATGTAAATGAAATA-orfs36] ______________
+
+strand = 'ATGTAAATGAAATA', orfs = ['ATG', 'ATGAAATA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_one_frame_cases)
+    def test_find_all_orfs_oneframe(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        non-overlapping open reading frames (ORFs) aligned to its frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs_oneframe function returns a list of strings representing all
+        non-overlapping ORFs in the strand that are aligned to the strand's frame
+        (i.e., starting a multiple of 3 nucleotides from the start of the strand).
+        Each ORF is a strand of DNA from a START codon to a STOP codon (or in the
+        case of the last ORF in the strand, to the end of the strand if no STOP
+        codon is encountered during reading).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand's frame.
+        """
+>       assert Counter(find_all_orfs_one_frame(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG... 'ATGAAA': 1}) == Counter({'ATG...ATGAAATA': 1})
+E         Omitting 1 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATGAAA': 1}
+E         Right contains 1 more item:
+E         {'ATGAAATA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:746: AssertionError
+________ test_find_all_orfs_oneframe[ATGTAAATGAAATAAATGCATTATA-orfs65] _________
+
+strand = 'ATGTAAATGAAATAAATGCATTATA', orfs = ['ATG', 'ATGAAA', 'ATGCATTATA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_one_frame_cases)
+    def test_find_all_orfs_oneframe(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        non-overlapping open reading frames (ORFs) aligned to its frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs_oneframe function returns a list of strings representing all
+        non-overlapping ORFs in the strand that are aligned to the strand's frame
+        (i.e., starting a multiple of 3 nucleotides from the start of the strand).
+        Each ORF is a strand of DNA from a START codon to a STOP codon (or in the
+        case of the last ORF in the strand, to the end of the strand if no STOP
+        codon is encountered during reading).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand's frame.
+        """
+>       assert Counter(find_all_orfs_one_frame(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG...TGCATTAT': 1}) == Counter({'ATG...GCATTATA': 1})
+E         Omitting 2 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATGCATTAT': 1}
+E         Right contains 1 more item:
+E         {'ATGCATTATA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:746: AssertionError
+_______________ test_find_all_orfs_oneframe[ATGAAACGAA-orfs101] ________________
+
+strand = 'ATGAAACGAA', orfs = ['ATGAAACGAA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_one_frame_cases)
+    def test_find_all_orfs_oneframe(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        non-overlapping open reading frames (ORFs) aligned to its frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs_oneframe function returns a list of strings representing all
+        non-overlapping ORFs in the strand that are aligned to the strand's frame
+        (i.e., starting a multiple of 3 nucleotides from the start of the strand).
+        Each ORF is a strand of DNA from a START codon to a STOP codon (or in the
+        case of the last ORF in the strand, to the end of the strand if no STOP
+        codon is encountered during reading).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand's frame.
+        """
+>       assert Counter(find_all_orfs_one_frame(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATGAAACGA': 1}) == Counter({'ATGAAACGAA': 1})
+E         Left contains 1 more item:
+E         {'ATGAAACGA': 1}
+E         Right contains 1 more item:
+E         {'ATGAAACGAA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:746: AssertionError
+_____________________ test_find_all_orfs[ATGGCATGA-orfs2] ______________________
+
+strand = 'ATGGCATGA', orfs = ['ATGGCA', 'ATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG... 1, 'ATG': 1}) == Counter({'ATG...1, 'ATGA': 1})
+E         Omitting 1 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+__________________ test_find_all_orfs[ATGAAAATGGCATGA-orfs5] ___________________
+
+strand = 'ATGAAAATGGCATGA', orfs = ['ATGAAAATGGCA', 'ATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG... 1, 'ATG': 1}) == Counter({'ATG...1, 'ATGA': 1})
+E         Omitting 1 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+________________________ test_find_all_orfs[ATGA-orfs7] ________________________
+
+strand = 'ATGA', orfs = ['ATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG': 1}) == Counter({'ATGA': 1})
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+____________________ test_find_all_orfs[AATGAAATGA-orfs15] _____________________
+
+strand = 'AATGAAATGA', orfs = ['ATGAAA', 'ATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG... 'ATGAAA': 1}) == Counter({'ATG...1, 'ATGA': 1})
+E         Omitting 1 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+_____________________ test_find_all_orfs[AATGGTAA-orfs16] ______________________
+
+strand = 'AATGGTAA', orfs = ['ATGGTAA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATGGTA': 1}) == Counter({'ATGGTAA': 1})
+E         Left contains 1 more item:
+E         {'ATGGTA': 1}
+E         Right contains 1 more item:
+E         {'ATGGTAA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+________________ test_find_all_orfs[ATGCATGCCCCCTGAATGA-orfs18] ________________
+
+strand = 'ATGCATGCCCCCTGAATGA', orfs = ['ATGCATGCCCCC', 'ATGA', 'ATGCCCCCTGAA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG...CCCCTGAA': 1}) == Counter({'ATG...CCCCTGAA': 1})
+E         Omitting 2 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+___________________ test_find_all_orfs[ATGCATGAATGA-orfs21] ____________________
+
+strand = 'ATGCATGAATGA', orfs = ['ATGCATGAA', 'ATGAATGA', 'ATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG... 1, 'ATG': 1}) == Counter({'ATG...1, 'ATGA': 1})
+E         Omitting 2 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+_____________ test_find_all_orfs[ATGTAAATGAAATAAATGCATTATA-orfs51] _____________
+
+strand = 'ATGTAAATGAAATAAATGCATTATA', orfs = ['ATG', 'ATGAAA', 'ATGCATTATA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG...TGCATTAT': 1}) == Counter({'ATG...GCATTATA': 1})
+E         Omitting 2 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATGCATTAT': 1}
+E         Right contains 1 more item:
+E         {'ATGCATTATA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+__________________ test_find_all_orfs[ATGTATGTGAAATGA-orfs59] __________________
+
+strand = 'ATGTATGTGAAATGA', orfs = ['ATGTATGTGAAA', 'ATG', 'ATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG...ATGTGAAA': 1}) == Counter({'ATG...1, 'ATGA': 1})
+E         Omitting 1 identical items, use -vv to show
+E         Differing items:
+E         {'ATG': 2} != {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+__________________ test_find_all_orfs[ATGAATGTGGCATGA-orfs60] __________________
+
+strand = 'ATGAATGTGGCATGA', orfs = ['ATGAATGTGGCA', 'ATGTGGCATGA', 'ATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG... 1, 'ATG': 1}) == Counter({'ATG...1, 'ATGA': 1})
+E         Omitting 2 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+__________________ test_find_all_orfs[ATGAAATGGAATTAA-orfs65] __________________
+
+strand = 'ATGAAATGGAATTAA', orfs = ['ATGAAATGGAAT', 'ATGGAATTAA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG...TGGAATTA': 1}) == Counter({'ATG...GGAATTAA': 1})
+E         Omitting 1 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATGGAATTA': 1}
+E         Right contains 1 more item:
+E         {'ATGGAATTAA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+___________________ test_find_all_orfs[ATGAATGATTTGA-orfs90] ___________________
+
+strand = 'ATGAATGATTTGA', orfs = ['ATGAATGATTTGA', 'ATGATT']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG... 'ATGATT': 1}) == Counter({'ATG... 'ATGATT': 1})
+E         Omitting 1 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATGAATGATTTG': 1}
+E         Right contains 1 more item:
+E         {'ATGAATGATTTGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+_____________ test_find_all_orfs[ATGTATGGATGAAGTTGAATGATGA-orfs91] _____________
+
+strand = 'ATGTATGGATGAAGTTGAATGATGA'
+orfs = ['ATGTATGGA', 'ATGATGA', 'ATGGATGAAGTTGAA', 'ATGAAGTTGAATGATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG...AATGATGA': 1}) == Counter({'ATG...AATGATGA': 1})
+E         Omitting 3 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATGATG': 1}
+E         Right contains 1 more item:
+E         {'ATGATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+___________________ test_find_all_orfs[ATGTAATGAATA-orfs92] ____________________
+
+strand = 'ATGTAATGAATA', orfs = ['ATG', 'ATGAATA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG... 'ATGAAT': 1}) == Counter({'ATG...'ATGAATA': 1})
+E         Omitting 1 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATGAAT': 1}
+E         Right contains 1 more item:
+E         {'ATGAATA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+________________ test_find_all_orfs[AATGTGAAAATGAAATGA-orfs99] _________________
+
+strand = 'AATGTGAAAATGAAATGA', orfs = ['ATG', 'ATGAAA', 'ATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_cases)
+    def test_find_all_orfs(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of all
+        open reading frames within the strand, with no overlapping ORFs within any
+        given frame of the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs function returns a list of strings representing all ORFs in
+        the strand as defined above. Overlapping ORFs are allowed as long as they do
+        not occur in different frames (i.e., each ORF is only non-overlapping with
+        the other ORFs in its own frame).
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand, with no overlapping ORFs within one frame of
+                strand.
+        """
+>       assert Counter(find_all_orfs(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG... 'ATGAAA': 1}) == Counter({'ATG...1, 'ATGA': 1})
+E         Omitting 1 identical items, use -vv to show
+E         Differing items:
+E         {'ATG': 2} != {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:768: AssertionError
+____________ test_find_all_orfs_both_strands[ATGAAAATGGCATGA-orfs7] ____________
+
+strand = 'ATGAAAATGGCATGA', orfs = ['ATGAAAATGGCA', 'ATGA', 'ATGCCATTTTCAT']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_both_strands_cases)
+    def test_find_all_orfs_both_strands(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of
+        all open reading frames within the strand or its reverse complement, with no
+        overlapping ORFs within a given frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs_both_strands function returns a list of strings representing
+        all ORFs in the strand or its reverse complement as defined above.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand or its reverse complement, with no
+                overlapping ORFs within one frame of either.
+        """
+>       assert Counter(find_all_orfs_both_strands(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG...ATTTTCAT': 1}) == Counter({'ATG...ATTTTCAT': 1})
+E         Omitting 2 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:788: AssertionError
+_________________ test_find_all_orfs_both_strands[ATGA-orfs9] __________________
+
+strand = 'ATGA', orfs = ['ATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_both_strands_cases)
+    def test_find_all_orfs_both_strands(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of
+        all open reading frames within the strand or its reverse complement, with no
+        overlapping ORFs within a given frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs_both_strands function returns a list of strings representing
+        all ORFs in the strand or its reverse complement as defined above.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand or its reverse complement, with no
+                overlapping ORFs within one frame of either.
+        """
+>       assert Counter(find_all_orfs_both_strands(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG': 1}) == Counter({'ATGA': 1})
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:788: AssertionError
+_______________ test_find_all_orfs_both_strands[TAGATGA-orfs15] ________________
+
+strand = 'TAGATGA', orfs = ['ATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_both_strands_cases)
+    def test_find_all_orfs_both_strands(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of
+        all open reading frames within the strand or its reverse complement, with no
+        overlapping ORFs within a given frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs_both_strands function returns a list of strings representing
+        all ORFs in the strand or its reverse complement as defined above.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand or its reverse complement, with no
+                overlapping ORFs within one frame of either.
+        """
+>       assert Counter(find_all_orfs_both_strands(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG': 1}) == Counter({'ATGA': 1})
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:788: AssertionError
+________ test_find_all_orfs_both_strands[TATGCAATGACATGATACGCAT-orfs31] ________
+
+strand = 'TATGCAATGACATGATACGCAT'
+orfs = ['ATGCAA', 'ATGACA', 'ATGATACGCAT', 'ATGCGTATCATGTCATTGCATA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_both_strands_cases)
+    def test_find_all_orfs_both_strands(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of
+        all open reading frames within the strand or its reverse complement, with no
+        overlapping ORFs within a given frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs_both_strands function returns a list of strings representing
+        all ORFs in the strand or its reverse complement as defined above.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand or its reverse complement, with no
+                overlapping ORFs within one frame of either.
+        """
+>       assert Counter(find_all_orfs_both_strands(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG...CATTGCAT': 1}) == Counter({'ATG...ATTGCATA': 1})
+E         Omitting 3 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATGCGTATCATGTCATTGCAT': 1}
+E         Right contains 1 more item:
+E         {'ATGCGTATCATGTCATTGCATA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:788: AssertionError
+________ test_find_all_orfs_both_strands[ATGCCATAGATGCATGCATGA-orfs34] _________
+
+strand = 'ATGCCATAGATGCATGCATGA'
+orfs = ['ATGCCA', 'ATGCATGCA', 'ATGCATGA', 'ATGA', 'ATGCATCTATGGCAT', 'ATGCATGCATCTATGGCAT']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_both_strands_cases)
+    def test_find_all_orfs_both_strands(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of
+        all open reading frames within the strand or its reverse complement, with no
+        overlapping ORFs within a given frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs_both_strands function returns a list of strings representing
+        all ORFs in the strand or its reverse complement as defined above.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand or its reverse complement, with no
+                overlapping ORFs within one frame of either.
+        """
+>       assert Counter(find_all_orfs_both_strands(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG...TATGGCAT': 1}) == Counter({'ATG...TATGGCAT': 1})
+E         Omitting 5 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:788: AssertionError
+___________ test_find_all_orfs_both_strands[ATGCATGTGACATGA-orfs53] ____________
+
+strand = 'ATGCATGTGACATGA'
+orfs = ['ATGCATGTGACA', 'ATG', 'ATGA', 'ATGCAT', 'ATGTCACATGCAT']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_both_strands_cases)
+    def test_find_all_orfs_both_strands(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of
+        all open reading frames within the strand or its reverse complement, with no
+        overlapping ORFs within a given frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs_both_strands function returns a list of strings representing
+        all ORFs in the strand or its reverse complement as defined above.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand or its reverse complement, with no
+                overlapping ORFs within one frame of either.
+        """
+>       assert Counter(find_all_orfs_both_strands(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG...ACATGCAT': 1}) == Counter({'ATG...ACATGCAT': 1})
+E         Omitting 3 identical items, use -vv to show
+E         Differing items:
+E         {'ATG': 2} != {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:788: AssertionError
+______________ test_find_all_orfs_both_strands[ATGAAATGA-orfs58] _______________
+
+strand = 'ATGAAATGA', orfs = ['ATGAAA', 'ATGA']
+
+    @pytest.mark.parametrize("strand,orfs", find_all_orfs_both_strands_cases)
+    def test_find_all_orfs_both_strands(strand, orfs):
+        """
+        Test that a string representing a strand of DNA gets mapped to a list of
+        all open reading frames within the strand or its reverse complement, with no
+        overlapping ORFs within a given frame.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_all_orfs_both_strands function returns a list of strings representing
+        all ORFs in the strand or its reverse complement as defined above.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orfs: A list of strings representing the expected strands of DNA that
+                are ORFs within strand or its reverse complement, with no
+                overlapping ORFs within one frame of either.
+        """
+>       assert Counter(find_all_orfs_both_strands(strand)) == Counter(orfs)
+E       AssertionError: assert Counter({'ATG... 1, 'ATG': 1}) == Counter({'ATG...1, 'ATGA': 1})
+E         Omitting 1 identical items, use -vv to show
+E         Left contains 1 more item:
+E         {'ATG': 1}
+E         Right contains 1 more item:
+E         {'ATGA': 1}
+E         Use -v to get the full diff
+
+test_gene_finder.py:788: AssertionError
+_______________________ test_find_longest_orf[ATGA-ATGA] _______________________
+
+strand = 'ATGA', orf = 'ATGA'
+
+    @pytest.mark.parametrize("strand,orf", find_longest_orf_cases)
+    def test_find_longest_orf(strand, orf):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the longest ORF within the strand or its reverse complement.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_longest_orf function returns a string representing a strand of DNA
+        equal to the longest ORF within the strand or its reverse complement.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orf: A string representing a strand of DNA equal to the expected longest
+                ORF in strand or its reverse complement.
+        """
+>       assert find_longest_orf(strand) == orf
+E       AssertionError: assert 'ATG' == 'ATGA'
+E         - ATGA
+E         ?    -
+E         + ATG
+
+test_gene_finder.py:806: AssertionError
+_______ test_find_longest_orf[ATGATGATGTGAATGAAAAATAAGTA-ATGAAAAATAAGTA] _______
+
+strand = 'ATGATGATGTGAATGAAAAATAAGTA', orf = 'ATGAAAAATAAGTA'
+
+    @pytest.mark.parametrize("strand,orf", find_longest_orf_cases)
+    def test_find_longest_orf(strand, orf):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the longest ORF within the strand or its reverse complement.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_longest_orf function returns a string representing a strand of DNA
+        equal to the longest ORF within the strand or its reverse complement.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orf: A string representing a strand of DNA equal to the expected longest
+                ORF in strand or its reverse complement.
+        """
+>       assert find_longest_orf(strand) == orf
+E       AssertionError: assert 'ATGAAAAATAAG' == 'ATGAAAAATAAGTA'
+E         - ATGAAAAATAAGTA
+E         ?             --
+E         + ATGAAAAATAAG
+
+test_gene_finder.py:806: AssertionError
+_ test_find_longest_orf[ATGAAATGAATGAAAAAAAAAAAAAAAAAATGA-ATGAATGAAAAAAAAAAAAAAAAAATGA] _
+
+strand = 'ATGAAATGAATGAAAAAAAAAAAAAAAAAATGA'
+orf = 'ATGAATGAAAAAAAAAAAAAAAAAATGA'
+
+    @pytest.mark.parametrize("strand,orf", find_longest_orf_cases)
+    def test_find_longest_orf(strand, orf):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the longest ORF within the strand or its reverse complement.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_longest_orf function returns a string representing a strand of DNA
+        equal to the longest ORF within the strand or its reverse complement.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orf: A string representing a strand of DNA equal to the expected longest
+                ORF in strand or its reverse complement.
+        """
+>       assert find_longest_orf(strand) == orf
+E       AssertionError: assert 'ATGAATGAAAAAAAAAAAAAAAAAATG' == 'ATGAATGAAAAAAAAAAAAAAAAAATGA'
+E         - ATGAATGAAAAAAAAAAAAAAAAAATGA
+E         ?                            -
+E         + ATGAATGAAAAAAAAAAAAAAAAAATG
+
+test_gene_finder.py:806: AssertionError
+_____ test_find_longest_orf[TATGCAATGACATGATACGCAT-ATGCGTATCATGTCATTGCATA] _____
+
+strand = 'TATGCAATGACATGATACGCAT', orf = 'ATGCGTATCATGTCATTGCATA'
+
+    @pytest.mark.parametrize("strand,orf", find_longest_orf_cases)
+    def test_find_longest_orf(strand, orf):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the longest ORF within the strand or its reverse complement.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_longest_orf function returns a string representing a strand of DNA
+        equal to the longest ORF within the strand or its reverse complement.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orf: A string representing a strand of DNA equal to the expected longest
+                ORF in strand or its reverse complement.
+        """
+>       assert find_longest_orf(strand) == orf
+E       AssertionError: assert 'ATGCGTATCATGTCATTGCAT' == 'ATGCGTATCATGTCATTGCATA'
+E         - ATGCGTATCATGTCATTGCATA
+E         ?                      -
+E         + ATGCGTATCATGTCATTGCAT
+
+test_gene_finder.py:806: AssertionError
+______________ test_find_longest_orf[ATGAAAATGAAAA-ATGAAAATGAAAA] ______________
+
+strand = 'ATGAAAATGAAAA', orf = 'ATGAAAATGAAAA'
+
+    @pytest.mark.parametrize("strand,orf", find_longest_orf_cases)
+    def test_find_longest_orf(strand, orf):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the longest ORF within the strand or its reverse complement.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_longest_orf function returns a string representing a strand of DNA
+        equal to the longest ORF within the strand or its reverse complement.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orf: A string representing a strand of DNA equal to the expected longest
+                ORF in strand or its reverse complement.
+        """
+>       assert find_longest_orf(strand) == orf
+E       AssertionError: assert 'ATGAAAATGAAA' == 'ATGAAAATGAAAA'
+E         - ATGAAAATGAAAA
+E         ?             -
+E         + ATGAAAATGAAA
+
+test_gene_finder.py:806: AssertionError
+_____________ test_find_longest_orf[ATGAAAAAATGAATGTGA-ATGAATGTGA] _____________
+
+strand = 'ATGAAAAAATGAATGTGA', orf = 'ATGAATGTGA'
+
+    @pytest.mark.parametrize("strand,orf", find_longest_orf_cases)
+    def test_find_longest_orf(strand, orf):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the longest ORF within the strand or its reverse complement.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_longest_orf function returns a string representing a strand of DNA
+        equal to the longest ORF within the strand or its reverse complement.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orf: A string representing a strand of DNA equal to the expected longest
+                ORF in strand or its reverse complement.
+        """
+>       assert find_longest_orf(strand) == orf
+E       AssertionError: assert 'ATGAAAAAA' == 'ATGAATGTGA'
+E         - ATGAATGTGA
+E         + ATGAAAAAA
+
+test_gene_finder.py:806: AssertionError
+____________________ test_find_longest_orf[ATGCTGA-ATGCTGA] ____________________
+
+strand = 'ATGCTGA', orf = 'ATGCTGA'
+
+    @pytest.mark.parametrize("strand,orf", find_longest_orf_cases)
+    def test_find_longest_orf(strand, orf):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the longest ORF within the strand or its reverse complement.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        find_longest_orf function returns a string representing a strand of DNA
+        equal to the longest ORF within the strand or its reverse complement.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            orf: A string representing a strand of DNA equal to the expected longest
+                ORF in strand or its reverse complement.
+        """
+>       assert find_longest_orf(strand) == orf
+E       AssertionError: assert 'ATGCTG' == 'ATGCTGA'
+E         - ATGCTGA
+E         ?       -
+E         + ATGCTG
+
+test_gene_finder.py:806: AssertionError
+___________________ test_encode_amino_acids[ATGCCCGCTTT-MPA] ___________________
+
+strand = 'ATGCCCGCTTT', protein = 'MPA'
+
+    @pytest.mark.parametrize("strand,protein", encode_amino_acids_cases)
+    def test_encode_amino_acids(strand, protein):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the amino acids encoded by the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        encode_amino_acids function returns a string consisting of one-letter IUPAC
+        amino acid codes corresponding to the sequence amino acids encoded by the
+        strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            protein: A string representing the expected sequence one-letter IUPAC
+                amino acid codes encoded by strand.
+        """
+>       assert encode_amino_acids(strand) == protein
+E       AssertionError: assert 'MPAF' == 'MPA'
+E         - MPA
+E         + MPAF
+E         ?    +
+
+test_gene_finder.py:825: AssertionError
+___________________ test_encode_amino_acids[ATGAACTATA-MNY] ____________________
+
+strand = 'ATGAACTATA', protein = 'MNY'
+
+    @pytest.mark.parametrize("strand,protein", encode_amino_acids_cases)
+    def test_encode_amino_acids(strand, protein):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the amino acids encoded by the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        encode_amino_acids function returns a string consisting of one-letter IUPAC
+        amino acid codes corresponding to the sequence amino acids encoded by the
+        strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            protein: A string representing the expected sequence one-letter IUPAC
+                amino acid codes encoded by strand.
+        """
+>       assert encode_amino_acids(strand) == protein
+E       AssertionError: assert 'MNY*' == 'MNY'
+E         - MNY
+E         + MNY*
+E         ?    +
+
+test_gene_finder.py:825: AssertionError
+_________________ test_encode_amino_acids[ATGCCCGCTTAGA-MPA*] __________________
+
+strand = 'ATGCCCGCTTAGA', protein = 'MPA*'
+
+    @pytest.mark.parametrize("strand,protein", encode_amino_acids_cases)
+    def test_encode_amino_acids(strand, protein):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the amino acids encoded by the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        encode_amino_acids function returns a string consisting of one-letter IUPAC
+        amino acid codes corresponding to the sequence amino acids encoded by the
+        strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            protein: A string representing the expected sequence one-letter IUPAC
+                amino acid codes encoded by strand.
+        """
+>       assert encode_amino_acids(strand) == protein
+E       AssertionError: assert 'MPA**' == 'MPA*'
+E         - MPA*
+E         + MPA**
+E         ?     +
+
+test_gene_finder.py:825: AssertionError
+_______________ test_encode_amino_acids[ATGCCCATGGCTTAGA-MPMA*] ________________
+
+strand = 'ATGCCCATGGCTTAGA', protein = 'MPMA*'
+
+    @pytest.mark.parametrize("strand,protein", encode_amino_acids_cases)
+    def test_encode_amino_acids(strand, protein):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the amino acids encoded by the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        encode_amino_acids function returns a string consisting of one-letter IUPAC
+        amino acid codes corresponding to the sequence amino acids encoded by the
+        strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            protein: A string representing the expected sequence one-letter IUPAC
+                amino acid codes encoded by strand.
+        """
+>       assert encode_amino_acids(strand) == protein
+E       AssertionError: assert 'MPMA**' == 'MPMA*'
+E         - MPMA*
+E         + MPMA**
+E         ?      +
+
+test_gene_finder.py:825: AssertionError
+___________________ test_encode_amino_acids[ATGATATTGA-MIL] ____________________
+
+strand = 'ATGATATTGA', protein = 'MIL'
+
+    @pytest.mark.parametrize("strand,protein", encode_amino_acids_cases)
+    def test_encode_amino_acids(strand, protein):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the amino acids encoded by the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        encode_amino_acids function returns a string consisting of one-letter IUPAC
+        amino acid codes corresponding to the sequence amino acids encoded by the
+        strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            protein: A string representing the expected sequence one-letter IUPAC
+                amino acid codes encoded by strand.
+        """
+>       assert encode_amino_acids(strand) == protein
+E       AssertionError: assert 'MIL*' == 'MIL'
+E         - MIL
+E         + MIL*
+E         ?    +
+
+test_gene_finder.py:825: AssertionError
+___________________ test_encode_amino_acids[ATGCAAGTAA-MQV] ____________________
+
+strand = 'ATGCAAGTAA', protein = 'MQV'
+
+    @pytest.mark.parametrize("strand,protein", encode_amino_acids_cases)
+    def test_encode_amino_acids(strand, protein):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the amino acids encoded by the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        encode_amino_acids function returns a string consisting of one-letter IUPAC
+        amino acid codes corresponding to the sequence amino acids encoded by the
+        strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            protein: A string representing the expected sequence one-letter IUPAC
+                amino acid codes encoded by strand.
+        """
+>       assert encode_amino_acids(strand) == protein
+E       AssertionError: assert 'MQV*' == 'MQV'
+E         - MQV
+E         + MQV*
+E         ?    +
+
+test_gene_finder.py:825: AssertionError
+_______________ test_encode_amino_acids[ATGAAAAAAAAAAAAAA-MKKKK] _______________
+
+strand = 'ATGAAAAAAAAAAAAAA', protein = 'MKKKK'
+
+    @pytest.mark.parametrize("strand,protein", encode_amino_acids_cases)
+    def test_encode_amino_acids(strand, protein):
+        """
+        Test that a string representing a strand of DNA gets mapped to a string
+        representing the amino acids encoded by the strand.
+    
+        Check that given a string representing a strand of DNA as defined above, the
+        encode_amino_acids function returns a string consisting of one-letter IUPAC
+        amino acid codes corresponding to the sequence amino acids encoded by the
+        strand.
+    
+        Args:
+            strand: A string representing a strand of DNA.
+            protein: A string representing the expected sequence one-letter IUPAC
+                amino acid codes encoded by strand.
+        """
+>       assert encode_amino_acids(strand) == protein
+E       AssertionError: assert 'MKKKKK' == 'MKKKK'
+E         - MKKKK
+E         + MKKKKK
+E         ?      +
+
+test_gene_finder.py:825: AssertionError
+=============================== warnings summary ===============================
+gene_finder.py:6
+  /home/steve/Dropbox/monochroic/github.com/olincollege/softdes-2021-01-admin/student-repos/DanPark13/assignments/4-using-sharing-code/gene_finder.py:6: TqdmDeprecationWarning: This function will be removed in tqdm==5.0.0
+  Please use `tqdm.notebook.tqdm` instead of `tqdm.tqdm_notebook`
+    tqdm().pandas()
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+=========================== short test summary info ============================
+FAILED test_gene_finder.py::test_rest_of_orf[ATGA-ATGA] - AssertionError: ass...
+FAILED test_gene_finder.py::test_rest_of_orf[ATGTTGA-ATGTTGA] - AssertionErro...
+FAILED test_gene_finder.py::test_rest_of_orf[ATGTTAA-ATGTTAA] - AssertionErro...
+FAILED test_gene_finder.py::test_rest_of_orf[ATGATAA-ATGATAA0] - AssertionErr...
+FAILED test_gene_finder.py::test_rest_of_orf[ATGATAA-ATGATAA1] - AssertionErr...
+FAILED test_gene_finder.py::test_rest_of_orf[ATGATGA-ATGATGA] - AssertionErro...
+FAILED test_gene_finder.py::test_rest_of_orf[ATGAAACTGA-ATGAAACTGA] - Asserti...
+FAILED test_gene_finder.py::test_find_all_orfs_oneframe[ATGA-orfs8] - Asserti...
+FAILED test_gene_finder.py::test_find_all_orfs_oneframe[ATGTAAATGAAATA-orfs36]
+FAILED test_gene_finder.py::test_find_all_orfs_oneframe[ATGTAAATGAAATAAATGCATTATA-orfs65]
+FAILED test_gene_finder.py::test_find_all_orfs_oneframe[ATGAAACGAA-orfs101]
+FAILED test_gene_finder.py::test_find_all_orfs[ATGGCATGA-orfs2] - AssertionEr...
+FAILED test_gene_finder.py::test_find_all_orfs[ATGAAAATGGCATGA-orfs5] - Asser...
+FAILED test_gene_finder.py::test_find_all_orfs[ATGA-orfs7] - AssertionError: ...
+FAILED test_gene_finder.py::test_find_all_orfs[AATGAAATGA-orfs15] - Assertion...
+FAILED test_gene_finder.py::test_find_all_orfs[AATGGTAA-orfs16] - AssertionEr...
+FAILED test_gene_finder.py::test_find_all_orfs[ATGCATGCCCCCTGAATGA-orfs18] - ...
+FAILED test_gene_finder.py::test_find_all_orfs[ATGCATGAATGA-orfs21] - Asserti...
+FAILED test_gene_finder.py::test_find_all_orfs[ATGTAAATGAAATAAATGCATTATA-orfs51]
+FAILED test_gene_finder.py::test_find_all_orfs[ATGTATGTGAAATGA-orfs59] - Asse...
+FAILED test_gene_finder.py::test_find_all_orfs[ATGAATGTGGCATGA-orfs60] - Asse...
+FAILED test_gene_finder.py::test_find_all_orfs[ATGAAATGGAATTAA-orfs65] - Asse...
+FAILED test_gene_finder.py::test_find_all_orfs[ATGAATGATTTGA-orfs90] - Assert...
+FAILED test_gene_finder.py::test_find_all_orfs[ATGTATGGATGAAGTTGAATGATGA-orfs91]
+FAILED test_gene_finder.py::test_find_all_orfs[ATGTAATGAATA-orfs92] - Asserti...
+FAILED test_gene_finder.py::test_find_all_orfs[AATGTGAAAATGAAATGA-orfs99] - A...
+FAILED test_gene_finder.py::test_find_all_orfs_both_strands[ATGAAAATGGCATGA-orfs7]
+FAILED test_gene_finder.py::test_find_all_orfs_both_strands[ATGA-orfs9] - Ass...
+FAILED test_gene_finder.py::test_find_all_orfs_both_strands[TAGATGA-orfs15]
+FAILED test_gene_finder.py::test_find_all_orfs_both_strands[TATGCAATGACATGATACGCAT-orfs31]
+FAILED test_gene_finder.py::test_find_all_orfs_both_strands[ATGCCATAGATGCATGCATGA-orfs34]
+FAILED test_gene_finder.py::test_find_all_orfs_both_strands[ATGCATGTGACATGA-orfs53]
+FAILED test_gene_finder.py::test_find_all_orfs_both_strands[ATGAAATGA-orfs58]
+FAILED test_gene_finder.py::test_find_longest_orf[ATGA-ATGA] - AssertionError...
+FAILED test_gene_finder.py::test_find_longest_orf[ATGATGATGTGAATGAAAAATAAGTA-ATGAAAAATAAGTA]
+FAILED test_gene_finder.py::test_find_longest_orf[ATGAAATGAATGAAAAAAAAAAAAAAAAAATGA-ATGAATGAAAAAAAAAAAAAAAAAATGA]
+FAILED test_gene_finder.py::test_find_longest_orf[TATGCAATGACATGATACGCAT-ATGCGTATCATGTCATTGCATA]
+FAILED test_gene_finder.py::test_find_longest_orf[ATGAAAATGAAAA-ATGAAAATGAAAA]
+FAILED test_gene_finder.py::test_find_longest_orf[ATGAAAAAATGAATGTGA-ATGAATGTGA]
+FAILED test_gene_finder.py::test_find_longest_orf[ATGCTGA-ATGCTGA] - Assertio...
+FAILED test_gene_finder.py::test_encode_amino_acids[ATGCCCGCTTT-MPA] - Assert...
+FAILED test_gene_finder.py::test_encode_amino_acids[ATGAACTATA-MNY] - Asserti...
+FAILED test_gene_finder.py::test_encode_amino_acids[ATGCCCGCTTAGA-MPA*] - Ass...
+FAILED test_gene_finder.py::test_encode_amino_acids[ATGCCCATGGCTTAGA-MPMA*]
+FAILED test_gene_finder.py::test_encode_amino_acids[ATGATATTGA-MIL] - Asserti...
+FAILED test_gene_finder.py::test_encode_amino_acids[ATGCAAGTAA-MQV] - Asserti...
+FAILED test_gene_finder.py::test_encode_amino_acids[ATGAAAAAAAAAAAAAA-MKKKK]
+================== 47 failed, 540 passed, 1 warning in 1.34s ===================

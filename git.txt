@@ -1,0 +1,96 @@
+commit 130a6c1de8c1c0a562d1310cf3c335e842b7003e
+Author: softdes <dpark0703@gmail.com>
+Date:   Fri Mar 19 13:08:53 2021 -0400
+
+    Completed Self Assessment for Assignment 4
+
+M	assignments/4-using-sharing-code/rubric-4.md
+
+commit 128052aa3f81fb24180cc15cbb6a548f6aec4297
+Author: Steve Matsumoto <smatsumoto@olin.edu>
+Date:   Fri Mar 19 01:32:33 2021 -0400
+
+    Add tests and/or solutions for Assignment 4
+
+R100	assignments/4-using-sharing-code/eighteen_proteins 	assignments/4-using-sharing-code/eighteen_proteins
+A	assignments/4-using-sharing-code/gene_finder_solution.py
+A	assignments/4-using-sharing-code/style.txt
+A	assignments/4-using-sharing-code/test.txt
+A	assignments/4-using-sharing-code/test_cases_2021_01.py
+A	assignments/4-using-sharing-code/vroom-solution.ipynb
+
+commit ab0f4ab946fb492c6a3115c997617429729848e4
+Author: softdes <dpark0703@gmail.com>
+Date:   Wed Mar 17 12:17:56 2021 -0400
+
+    Fixed Grammar and Spelling Errors in 'reflection.md'
+
+M	assignments/4-using-sharing-code/reflection.md
+
+commit de0c3a575f7fae23c2934141048ec90478107372
+Author: softdes <dpark0703@gmail.com>
+Date:   Wed Mar 17 12:15:59 2021 -0400
+
+    Checked for Grammar Mistakes and Style Errors in the Submissions
+
+M	assignments/4-using-sharing-code/gene_finder.py
+M	assignments/4-using-sharing-code/rubric-4.md
+M	assignments/4-using-sharing-code/sars-cov-2.ipynb
+
+commit 083813b38e79cd2aac07b34754d02459c8fce42e
+Author: softdes <dpark0703@gmail.com>
+Date:   Wed Mar 17 02:05:30 2021 -0400
+
+    Completed Assignment 4: Docstrings/Miscellaneous CS/Grammar Mistakes Fixes TODO
+
+M	assignments/4-using-sharing-code/4-using-sharing-code.ipynb
+A	assignments/4-using-sharing-code/eighteen_proteins 
+M	assignments/4-using-sharing-code/gene_finder.py
+R100	assignments/4-using-sharing-code/gene_finder_workflow.png	assignments/4-using-sharing-code/images/gene_finder_workflow.png
+A	assignments/4-using-sharing-code/images/membrane_protein.png
+A	assignments/4-using-sharing-code/images/nucleocapsid_protein.png
+A	assignments/4-using-sharing-code/images/polyprotein_orf1a.png
+A	assignments/4-using-sharing-code/images/spike_protein.png
+M	assignments/4-using-sharing-code/reflection.md
+M	assignments/4-using-sharing-code/rubric-4.md
+M	assignments/4-using-sharing-code/sars-cov-2.ipynb
+M	assignments/4-using-sharing-code/test_gene_finder.py
+
+commit 51b4ba08430cb1588eb4c37a1508de9740f22f5e
+Author: softdes <dpark0703@gmail.com>
+Date:   Tue Mar 16 15:41:03 2021 -0400
+
+    Completed Section 2 of Assignment 4: gene_finder.py
+
+M	assignments/4-using-sharing-code/gene_finder.py
+
+commit e6db16783e79bd4c1f73e2590f328e39403df471
+Author: softdes <dpark0703@gmail.com>
+Date:   Tue Mar 9 23:15:46 2021 -0500
+
+    Completed Section One 'Convoluted Plots' of Assignment 4
+
+M	assignments/4-using-sharing-code/4-using-sharing-code.ipynb
+M	assignments/4-using-sharing-code/vroom.ipynb
+
+commit ba845345f4da2dfe8a56163a8cfb307a19f61e23
+Author: Steve Matsumoto <smatsumoto@olin.edu>
+Date:   Thu Mar 4 20:42:49 2021 -0500
+
+    Add Assignment 4 files
+
+A	assignments/4-using-sharing-code/4-using-sharing-code.ipynb
+A	assignments/4-using-sharing-code/data/NC_045512.2.fa
+A	assignments/4-using-sharing-code/data/test_design_1.csv
+A	assignments/4-using-sharing-code/data/test_design_2.csv
+A	assignments/4-using-sharing-code/data/test_design_3.csv
+A	assignments/4-using-sharing-code/data/test_design_4.csv
+A	assignments/4-using-sharing-code/gene_finder.py
+A	assignments/4-using-sharing-code/gene_finder_workflow.png
+A	assignments/4-using-sharing-code/helpers.py
+A	assignments/4-using-sharing-code/pytest.ini
+A	assignments/4-using-sharing-code/reflection.md
+A	assignments/4-using-sharing-code/rubric-4.md
+A	assignments/4-using-sharing-code/sars-cov-2.ipynb
+A	assignments/4-using-sharing-code/test_gene_finder.py
+A	assignments/4-using-sharing-code/vroom.ipynb

@@ -1,0 +1,31 @@
+************* Module test_cases_2021_01
+test_cases_2021_01.py:188:0: C0301: Line too long (111/100) (line-too-long)
+test_cases_2021_01.py:303:0: C0301: Line too long (113/100) (line-too-long)
+test_cases_2021_01.py:349:0: C0301: Line too long (110/100) (line-too-long)
+test_cases_2021_01.py:371:0: C0301: Line too long (110/100) (line-too-long)
+test_cases_2021_01.py:431:0: C0301: Line too long (117/100) (line-too-long)
+test_cases_2021_01.py:463:0: C0301: Line too long (144/100) (line-too-long)
+test_cases_2021_01.py:624:0: C0305: Trailing newlines (trailing-newlines)
+test_cases_2021_01.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module test_gene_finder
+test_gene_finder.py:1:0: R0801: Similar lines in 2 files
+==test_cases_2021_01:0
+==test_gene_finder:18
+get_complement_cases = [
+    # Check that the complement of A is T.
+    ("A", "T"),
+    # Check that the complement of C is G.
+    ("C", "G"),
+    # Check that the complement of T is A.
+    ("T", "A"),
+    # Check that the complement of G is C.
+    ("G", "C"),
+]
+
+get_reverse_complement_cases = [
+    # Check a single nucleotide, which should be the same as the complement.
+    ("A", "T"), (duplicate-code)
+
+------------------------------------------------------------------
+Your code has been rated at 9.41/10 (previous run: 9.44/10, -0.03)
+
